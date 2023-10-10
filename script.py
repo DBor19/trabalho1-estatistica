@@ -1,5 +1,5 @@
 import pandas as pd
-import matplotlib.pyplot as pyplot
+import matplotlib.pyplot as plt
 
 
 df = pd.read_csv('Dados.csv')
@@ -77,3 +77,21 @@ print(f'Coeficiente de variação da altura: {coeficiente_variacao_altura:.4f}' 
 print(f'Coeficiente de variação do peso: {coeficiente_variacao_peso:.4f}' )
 print(f'Coeficiente de variação da idade: {coeficiente_variacao_idade:.4f}' )
 print(f'Coeficiente de variação do IMC: {coeficiente_variacao_imc:.4f}')
+
+plt.figure(1)
+boxplot1 = df.boxplot(column=['Altura'])
+plt.title("Box plot Altura")
+
+plt.figure(2)
+boxplot2 = df.boxplot(column=['Peso'])
+plt.title("Box plot Peso")
+
+plt.figure(3)
+boxplot3 = df.boxplot(column=['Idade'])
+plt.title("Box plot Idade")
+
+plt.figure(4)
+boxplot4 = df.boxplot(column=['Imc'])
+plt.title("Box plot IMC")
+
+plt.show()
