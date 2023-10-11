@@ -73,6 +73,7 @@ media_amostra_peso = amostra['Peso'].mean()
 media_amostra_idade = amostra['Idade'].mean()
 media_amostra_IMC = amostra['Imc'].mean()
 
+
 moda_amostra_altura = amostra['Altura'].mode()
 moda_amostra_peso = amostra['Peso'].mode()
 moda_amostra_idade = amostra['Idade'].mode()

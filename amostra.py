@@ -20,7 +20,3 @@ amostra_estratificada = pd.concat([x_train, y_train], axis=1)
 
 # Exibe as contagens de módulo na amostra estratificada
 print(amostra_estratificada['Modulo'].value_counts())
-
-
-desc_populacao = df[['Idade', 'Peso', 'Altura']].describe()
-
