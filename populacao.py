@@ -75,7 +75,7 @@ print(f'Coeficiente de variação do peso: {coeficiente_variacao_peso:.4f}')
 print(f'Coeficiente de variação da idade: {coeficiente_variacao_idade:.4f}')
 print(f'Coeficiente de variação do IMC: {coeficiente_variacao_imc:.4f}')
 
-
+# graficos boxplot
 plt.figure(1)
 boxplot1 = df.boxplot(column=['Altura'])
 plt.title("Box plot População")
@@ -91,5 +91,32 @@ plt.title("Box plot População")
 plt.figure(4)
 boxplot4 = df.boxplot(column=['Imc'])
 plt.title("Box plot População")
+
+plt.show()
+
+# graficos dispersao
+plt.figure(1)
+dispersao1 = df.plot.scatter(x='Altura', y='Peso')
+plt.title("Dispersão População")
+
+plt.figure(2)
+dispersao2 = df.plot.scatter(x='Altura', y='Idade')
+plt.title("Dispersão População")
+
+plt.figure(3)
+dispersao3 = df.plot.scatter(x='Altura', y='Imc')
+plt.title("Dispersão População")
+
+plt.figure(4)
+dispersao4 = df.plot.scatter(x='Peso', y='Idade')
+plt.title("Dispersão População")
+
+plt.figure(5)
+dispersao5 = df.plot.scatter(x='Peso', y='Imc')
+plt.title("Dispersão População")
+
+plt.figure(6)
+dispersao6 = df.plot.scatter(x='Idade', y='Imc')
+plt.title("Dispersão População")
 
 plt.show()
